@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry 155 Syllabus - Santa Barbara City College</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            width: 250px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-right: 2px solid #382868;
+            flex-shrink: 0;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-x: auto;
+        }
+        
+        .section-header {
+            background-color: #382868;
+            color: #ccccff;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        
+        .section-content {
+            background-color: #d9d9f3;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 12px;
+        }
+        
+        .section-content a {
+            color: #0000cc;
+            text-decoration: none;
+        }
+        
+        .section-content a:visited {
+            color: #297e5a;
+        }
+        
+        .section-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .nav-breadcrumb {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .nav-breadcrumb a {
+            color: #0000cc;
+            text-decoration: none;
+        }
+        
+        .print-link {
+            margin-top: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .college-header {
+            background-color: #382868;
+            color: #ccccff;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .announcement {
+            background-color: #ffffff;
+            border: 1px solid #007d7d;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 75%;
+            text-align: left;
+        }
+        
+        .course-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        .instructor-section, .course-details-section {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .instructor-photo {
+            max-width: 142px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #526aa9;
+        }
+        
+        .info-table td {
+            padding: 8px;
+            border: 1px solid #526aa9;
+        }
+        
+        .info-table .label {
+            font-weight: bold;
+            width: 52%;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .schedule-table th {
+            background-color: #382868;
+            color: #ccccff;
+            font-weight: bold;
+        }
+        
+        .course-description {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .mobile-nav-toggle {
+            display: none;
+            background-color: #382868;
+            color: #ccccff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .mobile-nav-toggle {
+                display: block;
+            }
+            
+            .sidebar {
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                padding: 0;
+                border-right: none;
+                border-bottom: 2px solid #382868;
+            }
+            
+            .sidebar.active {
+                max-height: 800px;
+                padding: 20px;
+            }
+            
+            .course-info-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .schedule-table {
+                font-size: 10px;
+            }
+            
+            .schedule-table th, .schedule-table td {
+                padding: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="mobile-nav-toggle" onclick="toggleNav()">☰ Course Navigation</button>
+    
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <div class="nav-breadcrumb">
+                <a href="#home">Home</a> >> <a href="#announcements">Announcements</a> >>
+            </div>
+            
+            <div class="section-header">Course Information</div>
+            <div class="section-content">
+                • <a href="#instructor">Faculty Information</a><br>
+                • <a href="#info">Basic Information</a><br>
+                • <a href="expectations.html">Expectations</a><br>
+                • <a href="objectives.html">Course Goals & Obj.</a><br>
+                • <a href="#description">Course Description</a><br>
+                • <a href="disclaimer.html">Teacher Disclaimer</a><br>
+                • <a href="#calendar">Calendar</a><br>
+                • <a href="#exams">Final, Midterms & Quizzes</a>
+            </div>
+            
+            <div class="section-header">Req. & Policies</div>
+            <div class="section-content">
+                • <a href="#requirements">Requirements</a><br>
+                • <a href="#policies">Policies & Conduct</a>
+            </div>
+            
+            <div class="section-header">Assessment</div>
+            <div class="section-content">
+                • <a href="#evaluation">Evaluation/Feedback</a><br>
+                • <a href="#grading">Grading Standards</a><br>
+                • <a href="#grades">Grade Posting</a>
+            </div>
+            
+            <div class="section-header">Student Resources</div>
+            <div class="section-content">
+                • <a href="#resources">Web Resources</a><br>
+                • <a href="#accommodation">Accommodation</a><br>
+                • <a href="#support">Learning Support</a>
+            </div>
+            
+            <div class="print-link">
+                <a href="#" onclick="window.print()">Print this Syllabus</a> >>
+            </div>
+        </nav>
+        
+        <main class="main-content">
+            <div class="college-header">
+                SANTA BARBARA CITY COLLEGE
+            </div>
+            
+            <div class="college-header" style="margin-top: -20px;">
+                Announcement
+            </div>
+            
+            <div class="announcement">
+                <p><strong>Posted on:</strong> 09-02-2003 11:43:13</p>
+                <p style="margin-top: 15px; font-size: 14px;">
+                    Please check this web page frequently in order to read the announcements and to keep track of changes.
+                </p>
+            </div>
+            
+            <div class="college-header">
+                General Chemistry I
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; margin: 20px 0; font-size: 14px; font-weight: bold;">
+                <div><strong>Course Identifier:</strong> Chem 155</div>
+                <div><strong>Period:</strong> 09-02-2003 to 12-19-2003</div>
+            </div>
+            
+            <hr style="width: 80%; margin: 20px auto; border: none; border-top: 1px solid #ccc;">
+            
+            <p style="margin: 20px; font-size: 16px;">Welcome to Chemistry 155!</p>
+            
+            <div class="course-info-grid">
+                <div class="instructor-section">
+					<div class="section-header"><a id="instructor"></a>Instructor</a></div>
+                    <div style="padding: 20px;">
+                        <img src= Syllabus_files/oerpix01.gif Raola" class="instructor-photo" style="background-color: #e9ecef; border: 1px solid #ccc;">
+                        <div style="font-size: 14px;">
+                            <strong>Name:</strong> Orlando Raola<br>
+                            <strong>Office:</strong> PS 206<br>
+                            <strong>Office Phone:</strong> 805-965-0581<br>
+                            <strong>Email:</strong> <a href="mailto:oraola@sbcconline.net">oraola@sbcconline.net</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-details-section">
+												   <div class="section-header"><a id="info">Course Information</a></div>
+                    <div style="padding: 15px;">
+                        <table class="info-table">
+                            <tr>
+                                <td class="label">Department:</td>
+                                <td><a href="#" target="_blank">Chemistry</a></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Course Title:</td>
+                                <td>General Chemistry I</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Course Identifier:</td>
+                                <td>Chem 155</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Section #:</td>
+                                <td>3192/ 3193 / 3194/03</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Course Units:</td>
+                                <td>5.00</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Class Room #:</td>
+                                <td>PS 128 (Tuesday), PS 130 (Thursday)</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Lab Room #:</td>
+                                <td>PS 208 (Section A), PS 214 (Section B)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th colspan="6">Office Hours</th>
+                    </tr>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-</td>
+                        <td>1:00 - 2:00 pm</td>
+                        <td>-</td>
+                        <td>5:00 - 6:00 pm</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th colspan="6">Class Meeting Days and Times</th>
+                    </tr>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-</td>
+                        <td>06:00 - 08:05 pm</td>
+                        <td>-</td>
+                        <td>06:00 - 06:50 pm</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th colspan="6">Lab Meeting Days and Times</th>
+                    </tr>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-</td>
+                        <td>03:05 - 05:55 pm (Section A)</td>
+                        <td>-</td>
+                        <td>07:00 - 09:50 pm (Section B)</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="course-description">
+                <h3 style="margin-bottom: 15px;"><a id="description">Class Description:</a></i></h3>
+                <p>
+                    This is the first part of a two-semester course and will cover the material in Chapters 1 to 11 in the textbook: Structure of atoms and molecules, redox, stoichiometry, bonding, states of matter, solutions, chemical calculations. This is a CSU/UC transferable course.
+                </p>
+            </div>
+            
+            <div style="margin: 20px 0; font-size: 14px;">
+                <p><strong>Where to leave messages:</strong> please use e-mail</p>
+                <p><strong>Where to leave assignments:</strong> use slot Chem 155 in wooden mailbox by the entrance of the stockroom</p>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        function toggleNav() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+        
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Close mobile nav after clicking on mobile
+                if (window.innerWidth <= 768) {
+                    document.getElementById('sidebar').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
