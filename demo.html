@@ -1,61 +1,124 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
-<meta name="ProgId" content="FrontPage.Editor.Document">
-<title>Lecture demonstration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            color: black;
+            line-height: 1.5;
+        }
+        
+        h2 {
+            font-family: Arial;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #2c3e50;
+            margin-bottom: 6px;
+            margin-top: 20px;
+        }
+        
+        .reaction {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        
+        .apparatus-image {
+            display: block;
+            margin: 20px auto;
+            border: none;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .materials-list {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .materials-list p {
+            margin: 3px 0;
+            font-size: 0.95em;
+        }
+        
+        .safety-warning {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #dc3545;
+        }
+        
+        .reference {
+            background-color: #e3f2fd;
+            border: 1px solid #bbdefb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        sub {
+            font-size: 0.8em;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-<h2><font face="Arial">Lecture demonstration: Preparation of sodium iodide (NaI)
-from its elements</font></h2>
-<p>&nbsp;</p>
-<p>In this demonstration, we use the following reaction:</p>
-<blockquote>
-  <p><!--webbot bot="HTMLMarkup" startspan --><div class="p"><!----></div>
-2Na(s)+ I<sub>2</sub>(s) <font face="symbol">®</font
-> 2 NaI(s)
-
-<div class="p"><!----></div><!--webbot bot="HTMLMarkup" endspan -->
-  </p>
-</blockquote>
-<p>that takes place in the following apparatus:</p>
-<blockquote>
-  <p><img border="0" src="images/apparatus.gif" width="300" height="246"></p>
-</blockquote>
-<h3>Materials:</h3>
-<blockquote>
-  <p ALIGN="left" style="margin-top: 0; margin-bottom: 3"><font size="2" face="AGaramond-Regular">0.6
-  g Na metal</font></p>
-  <font FACE="AGaramond-Regular" SIZE="2">
-  <p ALIGN="left" style="margin-top: 0; margin-bottom: 3">1 g I<sub>2 </sub>crystals&nbsp;</p>
-  <p ALIGN="left" style="margin-top: 0; margin-bottom: 3">20 mL denatured
-  ethanol&nbsp;</p>
-  </blockquote>
-</font>
-<h3 style="margin-bottom: 6">Procedure:&nbsp;</h3>
-<p style="margin-top: 0">Place the&nbsp; freshly cut piece of sodium in the
-larger test tube, the iodine crystals in the smaller tube and assemble the
-apparatus. Gently heat the sodium until it melts. By that time iodine vapors
-will form and descend to the bottom of the larger tube where they start reacting
-with the sodium. The reaction is very exothermic, so no more heating is needed
-once it starts. Turn down the lights in the lecture hall to observe the
-beautifull glow from the reaction. At the end, a white mass of sodium iodide
-crystals will be spread all over. Recover some of the crystals for later
-analysis. When the tubes are completely cooled down, add the ethanol in small
-portions to dissolve any remaining sodium.</p>
-<h3 style="margin-bottom: 6">Safety: </h3>
-<p style="margin-top: 0">Use eye protection. Conduct the demo inside a fume
-hood. Do not change quantities or reactants in this reaction, otherwise an
-explosion might occur.</p>
-<h3 style="margin-bottom: 6">Reference:</h3>
-<p style="margin-top: 0">Herman, Z. S.<br>
-<i>J. Chem. Ed.,</i> <b>77</b>(5), 619-621, 2000</p>
-<p>&nbsp;</p>
-
+    <h2>Lecture demonstration: Preparation of sodium iodide (NaI) from its elements</h2>
+    
+    <p>In this demonstration, we use the following reaction:</p>
+    
+    <div class="reaction">
+        2Na(s) + I<sub>2</sub>(s) â†’ 2 NaI(s)
+    </div>
+    
+    <p>that takes place in the following apparatus:</p>
+    
+    <img src="images/apparatus.gif" alt="Sodium iodide demonstration apparatus" class="apparatus-image">
+    
+    <h3>Materials:</h3>
+    <div class="materials-list">
+        <p>0.6 g Na metal</p>
+        <p>1 g I<sub>2</sub> crystals</p>
+        <p>20 mL denatured ethanol</p>
+    </div>
+    
+    <h3>Procedure:</h3>
+    <p>Place the freshly cut piece of sodium in the larger test tube, the iodine crystals in the smaller tube and assemble the apparatus. Gently heat the sodium until it melts. By that time iodine vapors will form and descend to the bottom of the larger tube where they start reacting with the sodium. The reaction is very exothermic, so no more heating is needed once it starts. Turn down the lights in the lecture hall to observe the beautiful glow from the reaction. At the end, a white mass of sodium iodide crystals will be spread all over. Recover some of the crystals for later analysis. When the tubes are completely cooled down, add the ethanol in small portions to dissolve any remaining sodium.</p>
+    
+    <h3>Safety:</h3>
+    <div class="safety-warning">
+        <p><strong>Important:</strong> Use eye protection. Conduct the demo inside a fume hood. Do not change quantities or reactants in this reaction, otherwise an explosion might occur.</p>
+    </div>
+    
+    <h3>Reference:</h3>
+    <div class="reference">
+        <p>Herman, Z. S.<br>
+        <em>J. Chem. Ed.,</em> <strong>77</strong>(5), 619-621, 2000</p>
+    </div>
 </body>
-
 </html>
