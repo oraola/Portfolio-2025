@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ESCI Evaluations</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; display: flex; min-height: 100vh; }
+    .navigation { width: 300px; background-color: #FFFFCC; padding: 20px; border-right: 1px solid #ccc; flex-shrink: 0; }
+    .navigation h3 { margin-top: 0; }
+    .navigation ol li { margin: 0 0 6px 0; }
+    .navigation a { color: blue; text-decoration: underline; cursor: pointer; }
+    .navigation a:visited { color: purple; }
+    .content { flex: 1; padding: 20px; background-color: white; }
+    .content iframe { width: 100%; height: 80vh; border: 1px solid #ccc; }
+    .nav-active { font-weight: bold; text-decoration: none; }
+    @media (max-width: 768px) {
+      body { flex-direction: column; }
+      .navigation { width: 100%; }
+      .content iframe { height: 60vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="navigation">
+    <h3>Categories</h3>
+    <ol id="catList">
+      <li><a href="#overall" data-page="overall.html">Overall rating of your TA as a teacher</a></li>
+      <li><a href="#prep" data-page="prep.html">Preparation for the laboratory</a></li>
+      <li><a href="#clarity" data-page="clarity.html">Clarity of explanation of the material</a></li>
+      <li><a href="#speaking" data-page="speaking.html">Speaking clearly and slowly</a></li>
+      <li><a href="#black" data-page="black.html">Blackboard presentation</a></li>
+      <li><a href="#attitude" data-page="attitude.html">Attitude toward students</a></li>
+      <li><a href="#fair" data-page="fair.html">Fairness in grading</a></li>
+      <li><a href="#safety" data-page="safety.html">Discussion and enforcement of safety procedures</a></li>
+    </ol>
+
+    <p><a href="#orlando" data-page="orlando.html">All categories for O. Raola</a></p>
+    <p><a href="esci.pdf" target="_blank" rel="noopener">Data source: original ESCI forms</a></p>
+  </div>
+
+  <div class="content">
+    <iframe id="contentFrame" src="overall.html" title="ESCI Content"></iframe>
+  </div>
+
+  <script>
+    const frame = document.getElementById('contentFrame');
+    const links = Array.from(document.querySelectorAll('[data-page]'));
+
+    function setActive(h) {
+      links.forEach(a => a.classList.toggle('nav-active', a.getAttribute('href') === h));
+    }
+
+    function pageForHash(hash) {
+      const clean = (hash || '#overall').replace(/^#?/, '#');
+      const match = links.find(a => a.getAttribute('href') === clean);
+      return match ? match.getAttribute('data-page') : 'overall.html';
+    }
+
+    function loadFromHash(push = false) {
+      const hash = location.hash || '#overall';
+      const page = pageForHash(hash);
+      if (frame.src.endsWith(page)) { setActive(hash); return; }
+      frame.src = page;
+      setActive(hash);
+      if (push) history.pushState({ hash }, '', hash);
+    }
+
+    // Delegate clicks; keep normal hash in URL, iframe handles content.
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[data-page]');
+      if (!a) return;
+      e.preventDefault();
+      const hash = a.getAttribute('href') || '#overall';
+      if (location.hash !== hash) {
+        // Change the hash; popstate will trigger loadFromHash
+        location.hash = hash;
+      } else {
+        loadFromHash(true);
+      }
+    });
+
+    window.addEventListener('hashchange', () => loadFromHash(false));
+    window.addEventListener('popstate', () => loadFromHash(false));
+
+    // Initial load
+    loadFromHash(false);
+  </script>
+</body>
+</html>

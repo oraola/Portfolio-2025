@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orlando E. Raola's Teaching Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 300px;
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      padding: 20px;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h1 {
+      font-size: 1.3em;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #3498db;
+      line-height: 1.3;
+    }
+
+    .sidebar h2 {
+      font-size: 1.1em;
+      margin: 20px 0 10px 0;
+      color: #ecf0f1;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin: 8px 0;
+    }
+
+    .sidebar a {
+      color: #bdc3c7;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: block;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #3498db;
+      color: white;
+      transform: translateX(5px);
+    }
+
+    .content {
+      margin-left: 300px;
+      padding: 40px;
+      max-width: 800px;
+      background: white;
+      min-height: 100vh;
+    }
+
+    .content section {
+      margin-bottom: 40px;
+      padding: 30px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-left: 4px solid #3498db;
+    }
+
+    .content h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      font-size: 2.2em;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+
+    .content h2 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-size: 1.6em;
+    }
+
+    .content p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .highlight-box {
+      background-color: #fff3cd;
+      border: 1px solid #ffeaa7;
+      padding: 20px;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
+
+    .requirements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .requirement-card {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #28a745;
+      transition: transform 0.3s ease;
+    }
+
+    .requirement-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .requirement-card h3 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <h1>UCSB Certificate in College and University Teaching (CCUT) Teaching Portfolio</h1>
+      <h2>Contents</h2>
+      <ul>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="philosophy.html" class="nav-link">Teaching Philosophy</a></li>
+        <li><a href="#requirement_1" class="nav-link">Requirement 1</a></li>
+        <li><a href="#requirement_2" class="nav-link">Requirement 2</a></li>
+        <li><a href="#requirement_3" class="nav-link">Requirement 3</a></li>
+        <li><a href="#requirement_4" class="nav-link">Requirement 4</a></li>
+        <li><a href="#requirement_5" class="nav-link">Requirement 5</a></li>
+        <br>
+        <li><a href="#acknowledgements" class="nav-link">Acknowledgements</a></li>
+        <li><a href="#supporting" class="nav-link">Supporting Documents</a></li>
+        <br>
+        <li><a href="#feedback" class="nav-link">Feedback</a></li>
+        <br>
+        <li><a href="#copyright" class="nav-link">Copyright Notice</a></li>
+      </ul>
+    </nav>
+    
+    <main class="content">
+      <section id="home">
+        <h1>Teaching Portfolio</h1>
+        <div class="highlight-box">
+          <p><strong>Welcome to my UCSB Certificate in College and University Teaching Portfolio</strong></p>
+          <p>This portfolio demonstrates my commitment to excellence in chemistry education and showcases evidence of effective teaching practices developed through years of classroom experience.</p>
+        </div>
+        
+        <h2>Portfolio Overview</h2>
+        <p>As a chemistry instructor, I believe that effective teaching combines rigorous scientific content with innovative pedagogical approaches. This portfolio contains evidence of my teaching effectiveness, including my philosophy, student feedback, course materials, and reflections on continuous improvement.</p>
+        
+        <div class="requirements-grid">
+          <div class="requirement-card">
+            <h3>Teaching Philosophy</h3>
+            <p>My core beliefs about learning, motivation, and the role of chemistry education in students' lives.</p>
+          </div>
+          <div class="requirement-card">
+            <h3>Course Materials</h3>
+            <p>Examples of exams, demonstrations, and supplemental materials I've developed.</p>
+          </div>
+          <div class="requirement-card">
+            <h3>Student Feedback</h3>
+            <p>Evidence of teaching effectiveness through student evaluations and testimonials.</p>
+          </div>
+          <div class="requirement-card">
+            <h3>Professional Development</h3>
+            <p>My ongoing commitment to improving as an educator through training and reflection.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section id="requirement_1">
+        <h2>Requirement 1</h2>
+        <p>Work as a Teaching Assistant at UCSB</p>
+      </section>
+      
+      <section id="requirement_2">
+        <h2>Requirement 2</h2>
+        <p>Psychology 237 Cognition&nbsp;</p>
+      </section>
+      
+      <section id="requirement_3">
+        <h2>Requirement 3</h2>
+        <p>Introducing new instructional technologies in the freshman Chemistry course</p>
+      </section>
+      
+      <section id="requirement_4">
+        <h2>Requirement 4</h2>
+        <p>Instructor of Record for Chem 155 at Santa Barbara City College, Summer 2003</p>
+      </section>
+      
+      <section id="requirement_5">
+        <h2>Requirement 5</h2>
+        <p>The Teaching Portfolio</p>
+      </section>
+      
+      <section id="acknowledgements">
+        <h2>Acknowledgements</h2>
+        <p>Recognition of those who have supported your teaching development journey.</p>
+      </section>
+      
+      <section id="supporting">
+        <h2>Supporting Documents</h2>
+        <p>Links to additional materials, syllabi, handouts, and other evidence.</p>
+      </section>
+      
+      <section id="feedback">
+        <h2>Feedback</h2>
+        <p>Student evaluations, peer observations, and other feedback on your teaching.</p>
+      </section>
+      
+      <section id="copyright">
+        <h2>Copyright Notice</h2>
+        <p>Copyright © 2005-2025 Orlando E. Raola. All rights reserved.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Simple smooth scrolling and active navigation
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          
+          // Only handle internal links (starting with #)
+          if (href.startsWith('#')) {
+            e.preventDefault();
+            
+            // Remove active class from all links
+            navLinks.forEach(l => l.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // Smooth scroll to section
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

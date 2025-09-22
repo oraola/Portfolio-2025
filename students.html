@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Evaluations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .evaluation-context {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .evaluation-questions {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        
+        .evaluation-questions ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .evaluation-questions li {
+            margin: 8px 0;
+            font-weight: 500;
+            color: #1976d2;
+        }
+        
+        .feedback-container {
+            display: grid;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feedback-item {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #28a745;
+        }
+        
+        .course-info {
+            background-color: #17a2b8;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .strength {
+            margin-bottom: 15px;
+        }
+        
+        .strength-label {
+            background-color: #28a745;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .weakness-label {
+            background-color: #ffc107;
+            color: #212529;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .feedback-text {
+            font-style: italic;
+            color: #495057;
+            line-height: 1.5;
+        }
+        
+        .special-recognition {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .special-recognition h3 {
+            color: #856404;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .letter-link {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .letter-link:hover {
+            background-color: #2980b9;
+            color: white;
+        }
+        
+        .reflection-section {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 30px;
+            border-left: 4px solid #6f42c1;
+        }
+        
+        .reflection-section h3 {
+            color: #6f42c1;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .key-learning {
+            background-color: #e8f5e8;
+            border: 1px solid #c3e6c3;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border-left: 4px solid #28a745;
+        }
+        
+        .key-learning strong {
+            color: #155724;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .feedback-item, .evaluation-context, .reflection-section {
+                padding: 15px;
+            }
+            
+            .course-info {
+                display: block;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Evaluations</h2>
+    
+    <div class="evaluation-context">
+        <h3>Assessment Framework</h3>
+        <p>In the Teaching Assessment Evaluations for Lower Division Chemistry courses at UCSB, students provide feedback on two key areas:</p>
+        
+        <div class="evaluation-questions">
+            <ol type="A">
+                <li>What do you feel is your TA's strongest attribute?</li>
+                <li>What do you feel is your TA's weakest point?</li>
+            </ol>
+        </div>
+        
+        <p>The following represents a sample of authentic student feedback received during my teaching appointments at UCSB:</p>
+    </div>
+    
+    <div class="feedback-container">
+        <div class="feedback-item">
+            <div class="course-info">CHEM 1AC • Fall 2000</div>
+            
+            <div class="strength">
+                <span class="strength-label">STRENGTH</span>
+                <span class="feedback-text">"He let us know that we could come to him with a problem. He made himself available."</span>
+            </div>
+            
+            <div>
+                <span class="weakness-label">AREA FOR GROWTH</span>
+                <span class="feedback-text">"Clarity on how the lab works, I have trouble adjusting because I was not clear on what I was supposed to do"</span>
+            </div>
+        </div>
+        
+        <div class="feedback-item">
+            <div class="course-info">CHEM 1BC • Winter 2001</div>
+            
+            <div class="strength">
+                <span class="strength-label">STRENGTH</span>
+                <span class="feedback-text">"Very understanding and helpful to students"</span>
+            </div>
+            
+            <div>
+                <span class="weakness-label">AREA FOR GROWTH</span>
+                <span class="feedback-text">"The quizzes are difficult. They are hard to study because we don't know what is going to be on them."</span>
+            </div>
+        </div>
+        
+        <div class="feedback-item">
+            <div class="course-info">CHEM 1AL • Spring 2002</div>
+            
+            <div class="strength">
+                <span class="strength-label">STRENGTH</span>
+                <span class="feedback-text">"His sense of being able to understand the students' weak points in understanding"</span>
+            </div>
+            
+            <div>
+                <span class="weakness-label">AREA FOR GROWTH</span>
+                <span class="feedback-text">"He is usually in a hurry which is slightly distracting but not negatively affecting the teaching quality."</span>
+            </div>
+        </div>
+        
+        <div class="feedback-item">
+            <div class="course-info">CHEM 1CC • Spring 2001</div>
+            
+            <div class="strength">
+                <span class="strength-label">STRENGTH</span>
+                <span class="feedback-text">"Knowledgeable in the lab experiments. Always prepared for the lecture. Is always open to questions"</span>
+            </div>
+            
+            <div>
+                <span class="weakness-label">AREA FOR GROWTH</span>
+                <span class="feedback-text">"He needs to grade the assignments and hand them back to the students"</span>
+            </div>
+        </div>
+        
+        <div class="feedback-item">
+            <div class="course-info">CHEM 1AL • Spring 2002</div>
+            
+            <div class="strength">
+                <span class="strength-label">STRENGTH</span>
+                <span class="feedback-text">"He is willing to help and explain concepts individually if necessary"</span>
+            </div>
+            
+            <div>
+                <span class="weakness-label">AREA FOR GROWTH</span>
+                <span class="feedback-text">No weaknesses identified</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="special-recognition">
+        <h3>Student Recognition</h3>
+        <p>In Winter 2002, a student voluntarily wrote a letter acknowledging my work as a teaching assistant. This unsolicited testimonial demonstrates the impact of dedicated mentorship on student success.</p>
+        <a href="jessica.htm" class="letter-link">📄 Read Jessica Groome's Letter</a>
+    </div>
+    
+    <div class="reflection-section">
+        <h3>Reflective Analysis</h3>
+        <p>These student evaluations provide valuable insights into my teaching effectiveness and areas for continuous improvement:</p>
+        
+        <div class="key-learning">
+            <strong>Accessibility & Individual Support:</strong> Students consistently recognized my efforts to be available and cater to individual needs. This reinforces my belief that personal connection is fundamental to effective teaching.
+        </div>
+        
+        <div class="key-learning">
+            <strong>Importance of Timely Feedback:</strong> Comments about grading assignments taught me that timely feedback is not just administrative—it directly impacts student motivation and willingness to engage with the learning process.
+        </div>
+        
+        <div class="key-learning">
+            <strong>Transformative Potential:</strong> Working with students like Jessica, who entered with misconceptions about chemistry but left mastering fundamental concepts, demonstrated the transformative power of perseverance and individualized instruction.
+        </div>
+        
+        <div class="key-learning">
+            <strong>Balancing Challenge & Support:</strong> Feedback about quiz difficulty highlighted the need to balance intellectual challenge with clear expectations—leading me to develop more transparent pedagogical strategies.
+        </div>
+    </div>
+</body>
+</html>
